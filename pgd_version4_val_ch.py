@@ -50,13 +50,7 @@ augment = transforms.Compose([
     transforms.RandomCrop(32, padding=4),
     transforms.RandomHorizontalFlip(),
     transforms.RandomVerticalFlip(),
-    transforms.RandomChoice([
-        transforms.RandomRotation((0,0)),
-        transforms.RandomRotation((90,90)),
-        transforms.RandomRotation((180,180)),
-        transforms.RandomRotation((270,270)),
-    ]),
-    transforms.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.05),
+    transforms.RandomRotation(90),
     
 ])
 
